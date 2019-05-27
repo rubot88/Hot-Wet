@@ -1,3 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans:300,400,600|Rubik&display=swap&subset=cyrillic");
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?vbn8uo");
+  src: url("../fonts/icomoon.eot?vbn8uo#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?vbn8uo") format("truetype"), url("../fonts/icomoon.woff?vbn8uo") format("woff"), url("../fonts/icomoon.svg?vbn8uo#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-basket:before {
+  content: "\e900";
+}
+
+.icon-facebook:before {
+  content: "\e901";
+}
+
+.icon-favorite:before {
+  content: "\e909";
+}
+
+.icon-instagram:before {
+  content: "\e908";
+}
+
+.icon-youtube:before {
+  content: "\e907";
+}
+
 html,
 body,
 div,
@@ -84,7 +127,8 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -98,35 +142,43 @@ hgroup,
 menu,
 nav,
 section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol,
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote,
 q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 * {
-  box-sizing: border-box;
-  outline: none; }
-
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
 /*# sourceMappingURL=main.css.map */
