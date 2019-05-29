@@ -1,3 +1,265 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans:300,400,600|Rubik&display=swap&subset=cyrillic');
 @import 'icomoon';
 @import 'reset';
+
+/*===========================Variables===========================*/
+
+$content-width: 1266px;
+$about-bg-color:#f3f3f3;
+$base-text-color: #000;
+$nav-bg-color: #1a1a18;
+$secondary-text-color: #333740;
+$separator-color: #818181;
+$base-font: 'Open Sans',
+sans-serif;
+
+/*==========================Mixins================================*/
+
+@mixin display-inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@mixin font-size($font-size: 14px,
+$line-height: 18px) {
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin img-respons {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+/*=========================Body==================================*/
+
+.center {
+    max-width: $content-width;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: $base-font;
+    @include font-size(12px,
+    24px)
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+
+/*========================Header====================================*/
+
+.about {
+    background: $about-bg-color;
+    padding: 6px 0;
+    color: $secondary-text-color;
+    .about-wrapper {
+        display: flex;
+        justify-content: space-between;
+        .about-list {
+            display: flex;
+            li {
+                margin: 0 18px 0 0;
+            }
+        }
+        .about-list a,
+        .text-desc {
+            color: $secondary-text-color;
+        }
+        .text-desc {
+            text-align: right;
+        }
+    }
+}
+
+.logo-section {
+    @include font-size(14px,
+    18px);
+    padding: 10px 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .lang-curr {
+        display: flex;
+    }
+    .lang-list {
+        display: flex;
+        padding: 0 10px 0px 0;
+        margin: 0 18px 16px 0;
+        border-right: 2px solid rgba(0, 0, 0, 0.05);
+        &::after {
+            content: '';
+            display: inline-block;
+            vertical-align: top;
+        }
+        li {
+            margin: 0 10px 0 0;
+            min-height: 23px;
+        }
+        li:hover {
+            a {
+                color: #1a1a18;
+                border-bottom: 2px solid #1a1a18;
+            }
+        }
+        a {
+            color: #5e5e5e;
+            display: inline-block;
+            vertical-align: top;
+            text-transform: uppercase;
+        }
+    }
+    .cerrency {
+        min-height: 23px;
+        text-transform: uppercase;
+        &::after {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 3px;
+            height: 3px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(45deg);
+            margin: 0 0 0 6px;
+        }
+    }
+    .logo-container {
+        max-width: 25%;
+        width: 100%;
+        padding: 0 0 0 34px;
+        a {
+            max-width: 214px;
+            width: auto;
+            height: auto;
+            display: inline-block;
+            vertical-align: top;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.buy-list {
+    display: flex;
+    align-self: flex-start;
+    margin: 0 -13px 0;
+    padding: 20px 0 0;
+    li {
+        border-right: 2px solid rgba(0, 0, 0, 0.05);
+        padding: 0 10px;
+        &:last-child {
+            border: none;
+        }
+        a {
+            @include display-inline-block();
+            color: $base-text-color;
+        }
+        .counter {
+            @include display-inline-block();
+            @include font-size(12px,
+            16px);
+            margin: 0 8px 0 0;
+        }
+        .icon-basket {
+            @include font-size(25px,
+            25px)
+        }
+        .icon-favorite {
+            @include font-size(22px,
+            22px);
+        }
+    }
+}
+
+.nav-section {
+    background: $nav-bg-color;
+    min-height: 42px;
+    .nav-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &.top-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    .nav-menu {
+        display: flex;
+        margin: 0 -16px 0;
+        li {
+            text-transform: uppercase;
+            &:hover {
+                background: #3c3c3a;
+            }
+        }
+        a {
+            color: #cfcfcf;
+            @include display-inline-block();
+            padding: 9px 16px;
+            ;
+        }
+    }
+    .form-container {
+        align-self: stretch;
+        input[type=text] {
+            background: none;
+            border: none;
+            color: #fff;
+            text-align: right;
+            padding: 13px 6px;
+            width: 300px;
+            &:focus {
+                background: #3c3c3a;
+                text-align: left;
+                &::placeholder {
+                    color: #3c3c3a;
+                }
+            }
+        }
+        .fa-search {
+            @include font-size(20px,
+            20px);
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.7);
+            vertical-align: middle;
+        }
+    }
+    .burger-menu-wrapp {
+        display: none;
+        justify-content: flex-start;
+        align-self: center;
+        .burger {
+            width: 20px;
+            height: 3px;
+            color: #fff;
+        }
+    }
+    .top-fixed {
+        .buy-list {
+            display: flex;
+        }
+    }
+    .buy-list {
+        padding: 0;
+        align-self: flex-end;
+        display: none;
+        .counter {
+            color: #cfcfcf;
+        }
+        .icon {
+            color: #fff;
+        }
+    }
+}
