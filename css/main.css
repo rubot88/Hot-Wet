@@ -374,6 +374,18 @@ body a:hover {
   min-height: 42px;
 }
 
+.nav-section .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .nav-section .nav-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,6 +396,9 @@ body a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .nav-section.top-fixed {
@@ -461,6 +476,10 @@ body a:hover {
   vertical-align: middle;
 }
 
+.nav-section .form-container.hide {
+  display: none;
+}
+
 .nav-section .burger-menu-wrapp {
   display: none;
   -webkit-box-pack: start;
@@ -496,5 +515,41 @@ body a:hover {
 
 .nav-section .buy-list .icon {
   color: #fff;
+}
+
+.banner-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: url(../img/banner_section_bg.jpg) no-repeat;
+  background-size: contain;
+  background-position-y: 73%;
+  padding: 30px 0 0;
+}
+
+.banner-section .banner-carousel a {
+  vertical-align: top;
+  width: auto;
+}
+
+.banner-section .banner-carousel img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.description .title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.description .sub-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
+  line-height: 16px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -12,6 +12,8 @@ $secondary-text-color: #333740;
 $separator-color: #818181;
 $base-font: 'Open Sans',
 sans-serif;
+$title-font: 'Cormorant Garamond',
+serif;
 
 /*==========================Mixins================================*/
 
@@ -181,11 +183,16 @@ body a:hover {
 
 .nav-section {
     background: $nav-bg-color;
-    min-height: 42px;
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .nav-wrap {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex: 1;
     }
     &.top-fixed {
         position: fixed;
@@ -212,13 +219,14 @@ body a:hover {
     }
     .form-container {
         align-self: stretch;
-        input[type=text] {
+        .search {
             background: none;
             border: none;
             color: #fff;
             text-align: right;
-            padding: 13px 6px;
+            padding: 0 6px;
             width: 300px;
+            min-height: 42px;
             &:focus {
                 background: #3c3c3a;
                 text-align: left;
@@ -234,6 +242,9 @@ body a:hover {
             border: none;
             color: rgba(255, 255, 255, 0.7);
             vertical-align: middle;
+        }
+        &.hide {
+            display: none;
         }
     }
     .burger-menu-wrapp {
@@ -261,5 +272,67 @@ body a:hover {
         .icon {
             color: #fff;
         }
+    }
+}
+
+.banner-section {
+    display: flex;
+    justify-content: flex-start;
+    background: url(../img/banner_section_bg.jpg) no-repeat;
+    background-size: contain;
+    background-position-y: 74%;
+    padding: 30px 0 0;
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .banner-carousel {
+        max-width: 44%;
+        a {
+            vertical-align: top;
+            width: auto;
+        }
+        img {
+            @include img-respons();
+        }
+    }
+    .section-desc {
+        padding: 4% 0 0 45px;
+    }
+    .dots-wrap {
+        display: flex;
+        justify-content: flex-start;
+        .slick-current .img-container {
+            position: relative;
+        }
+        .slick-current .img-container::after {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, .45);
+            opacity: 1;
+            transition: all .2s ease-in-out;
+        }
+        .img-container {
+            margin: 0 36px 0 0;
+        }
+    }
+}
+
+.description {
+    .title {
+        font-family: $title-font;
+        @include font-size(40px,
+        46px)
+    }
+    .sub-title {
+        font-family: 'Times New Roman', Times, serif;
+        @include font-size(12px,
+        16px);
     }
 }

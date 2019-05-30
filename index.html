@@ -9,7 +9,7 @@
     <!-- <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon"> -->
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./scss/main.css">
     <!--[if IE]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 </head>
 
@@ -82,7 +82,7 @@
                     <div class="form-container">
                         <form method="GET" action="index.html">
                             <label>
-                                    <input type="text" name="q" id="mySearch" placeholder="поиск по сайту">
+                                    <input class="search" type="text" name="q" id="mySearch" placeholder="поиск по сайту">
                                     <button type="submit" class="fa fa-search"></button>
                                 </label>
                         </form>
@@ -116,9 +116,49 @@
         </div>
 
     </header>
+    <main>
+        <div class="center">
+            <section class="banner-section">
+                <div class="banner-carousel">
+                    <a href="#" class="img-container">
+                        <img src="./img/banner_section_photo_1.jpg" alt="girl in swimsuit"></a>
+                    <a href="#" class="img-container">
+                        <img src="./img/banner_section_photo_1.jpg" alt="girl in swimsuit"></a>
+                    <a href="#" class="img-container">
+                        <img src="./img/banner_section_photo_1.jpg" alt="girl in swimsuit"></a>
+                </div>
+                <div class="section-desc">
+                    <div class="dots-wrap">
+                        <div class="item">
+                            <div class="img-container">
+                                <img src="./img/banner_section_photo_dot_1.jpg" alt="girl in swimsuit">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-container">
+                                <img src="./img/banner_section_photo_dot_2.jpg" alt="girl in swimsuit">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-container">
+                                <img src="./img/banner_section_photo_dot_3.jpg" alt="girl in swimsuit">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1 class="title">Новая коллекция</h1>
+                        <div class="sub-title">посмотреть новинки</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
 
     <script src="./js/jquery.js "></script>
     <script src="./js/slick.min.js "></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
