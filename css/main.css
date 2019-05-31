@@ -201,6 +201,17 @@ body a:hover {
   text-decoration: none;
 }
 
+.responive-img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.img-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
 /*========================Header====================================*/
 .about {
   background: #f3f3f3;
@@ -371,7 +382,6 @@ body a:hover {
 
 .nav-section {
   background: #1a1a18;
-  min-height: 42px;
 }
 
 .nav-section .nav-container {
@@ -437,33 +447,34 @@ body a:hover {
       align-self: stretch;
 }
 
-.nav-section .form-container input[type=text] {
+.nav-section .form-container .search {
   background: none;
   border: none;
   color: #fff;
   text-align: right;
-  padding: 13px 6px;
+  padding: 0 6px;
   width: 300px;
+  min-height: 42px;
 }
 
-.nav-section .form-container input[type=text]:focus {
+.nav-section .form-container .search:focus {
   background: #3c3c3a;
   text-align: left;
 }
 
-.nav-section .form-container input[type=text]:focus::-webkit-input-placeholder {
+.nav-section .form-container .search:focus::-webkit-input-placeholder {
   color: #3c3c3a;
 }
 
-.nav-section .form-container input[type=text]:focus:-ms-input-placeholder {
+.nav-section .form-container .search:focus:-ms-input-placeholder {
   color: #3c3c3a;
 }
 
-.nav-section .form-container input[type=text]:focus::-ms-input-placeholder {
+.nav-section .form-container .search:focus::-ms-input-placeholder {
   color: #3c3c3a;
 }
 
-.nav-section .form-container input[type=text]:focus::placeholder {
+.nav-section .form-container .search:focus::placeholder {
   color: #3c3c3a;
 }
 
@@ -524,32 +535,206 @@ body a:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background: url(../img/banner_section_bg.jpg) no-repeat;
-  background-size: contain;
-  background-position-y: 73%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 30px 0 0;
+  margin: 0 0 96px;
+}
+
+.banner-section::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.banner-section .banner-carousel {
+  max-width: 43.5%;
 }
 
 .banner-section .banner-carousel a {
   vertical-align: top;
   width: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-section .banner-carousel a::after {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 21px solid rgba(255, 255, 255, 0.45);
+  z-index: -1;
 }
 
 .banner-section .banner-carousel img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
+  padding: 0 22% 0;
+}
+
+.banner-section .section-desc {
+  background: url(../img/banner_section_bg.jpg) no-repeat;
+  background-size: cover;
+  padding: 31.6% 0 0;
+  width: 56.5%;
+  position: relative;
+  margin: 3% 0 0;
+}
+
+.banner-section .dots-wrap {
+  position: absolute;
+  bottom: 83%;
+  left: 7%;
+}
+
+.banner-section .dots-wrap .slick-current .img-container {
+  position: relative;
+}
+
+.banner-section .dots-wrap .slick-current .img-container::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.45);
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.banner-section .dots-wrap .img-container {
+  margin: 0 36px 0 0;
+}
+
+.banner-section .description {
+  position: absolute;
+  top: 39%;
+  left: 7%;
+}
+
+.description {
+  padding: 0 0 0 2px;
+}
+
+.description a {
+  color: #000;
 }
 
 .description .title {
   font-family: "Cormorant Garamond", serif;
   font-size: 40px;
   line-height: 46px;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0 0 15px;
+  padding: 0 0 5px;
+}
+
+.description .title::before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  top: 100%;
+  left: 2px;
+  width: 92px;
+  height: 2px;
+  background: #000;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .description .sub-title {
   font-family: 'Times New Roman', Times, serif;
   font-size: 12px;
   line-height: 16px;
+  text-transform: uppercase;
+  color: #5e5e5e;
+}
+
+.description:hover .title::before {
+  -webkit-transform: translateX(10%) scaleX(1.2);
+          transform: translateX(10%) scaleX(1.2);
+}
+
+.second-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.second-section .img-container {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1;
+          flex: 2 1;
+  max-width: 35%;
+}
+
+.second-section .decriptiob-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  min-width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px 20px 22px 24px;
+}
+
+.second-section .decriptiob-container .sub-title {
+  color: #a8a8a8;
+}
+
+.second-section .decriptiob-container .right {
+  text-align: right;
+}
+
+.second-section .decriptiob-container .right .title {
+  margin: 0 0 16px;
+  padding: 0px 0 10px;
+}
+
+.second-section .decriptiob-container .left .title {
+  padding: 0 0 9px;
+  margin: 0 0 12px;
+}
+
+.second-section .decriptiob-container .description.right .title::before {
+  right: 2px;
+  left: initial;
+}
+
+.second-section .decriptiob-container .description.right:hover .title::before {
+  -webkit-transform: translateX(-10%) scaleX(1.2);
+          transform: translateX(-10%) scaleX(1.2);
+}
+
+.second-section .decriptiob-container .logo-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 0 18px;
+}
+
+.second-section .decriptiob-container .logo-container a {
+  display: block;
+  width: 125px;
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */
