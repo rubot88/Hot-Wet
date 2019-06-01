@@ -549,17 +549,17 @@ body a:hover {
 }
 
 .banner-section .banner-carousel {
-  max-width: 43.5%;
+  width: 43.5%;
 }
 
-.banner-section .banner-carousel a {
+.banner-section .banner-carousel .img-container {
   vertical-align: top;
   width: auto;
   position: relative;
   z-index: 1;
 }
 
-.banner-section .banner-carousel a::after {
+.banner-section .banner-carousel .img-container::after {
   content: '';
   display: inline-block;
   vertical-align: top;
@@ -572,7 +572,7 @@ body a:hover {
   z-index: -1;
 }
 
-.banner-section .banner-carousel img {
+.banner-section .banner-carousel .responive-img {
   padding: 0 22% 0;
 }
 
@@ -619,6 +619,63 @@ body a:hover {
   left: 7%;
 }
 
+.banner-section .description a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.banner-section.second {
+  padding: 0;
+}
+
+.banner-section.second .section-desc {
+  background: url(../img/second_banner_section_bg.jpg) no-repeat;
+  background-size: cover;
+  padding: 34% 0 0;
+  margin: 0;
+}
+
+.banner-section.second .description {
+  top: 35%;
+  left: 20%;
+}
+
+.banner-section.second .description .title {
+  margin: 0 0 22px;
+  padding: 0 0 7px;
+}
+
+.banner-section.second .banner-container {
+  width: 43.5%;
+}
+
+.banner-section.second .img-container {
+  background: url(../img/second_banner_section_photo_bg.jpg) no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  max-height: 493px;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-align: right;
+  padding: 1% 0 0;
+}
+
+.banner-section.second .img-container::after {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 21px solid rgba(255, 255, 255, 0.45);
+  z-index: -1;
+}
+
 .description {
   padding: 0 0 0 2px;
 }
@@ -662,14 +719,14 @@ body a:hover {
 }
 
 .description:hover .title::before {
-  -webkit-transform: translateX(10%) scaleX(1.2);
-          transform: translateX(10%) scaleX(1.2);
+  width: 110px;
 }
 
 .second-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 0 95px;
 }
 
 .second-section .img-container {
@@ -721,8 +778,7 @@ body a:hover {
 }
 
 .second-section .decriptiob-container .description.right:hover .title::before {
-  -webkit-transform: translateX(-10%) scaleX(1.2);
-          transform: translateX(-10%) scaleX(1.2);
+  width: 110px;
 }
 
 .second-section .decriptiob-container .logo-container {
