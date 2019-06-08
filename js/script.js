@@ -16,8 +16,15 @@ $(document).ready(function() {
     $('.favorites-carousel').slick({
         autoplay: true,
         slidesToShow: 4,
-        slidesToScroll: 1
-
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 961,
+            settings: {
+                autoplay: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        }]
     });
 
     $('.moreless').click(function() {
@@ -53,8 +60,18 @@ $(document).ready(function() {
     });
 
 
-    // $('.burger').click(function() {
-    //     $('.nav-container').toggleClass('active');
-    //     $('.burger').toggleClass('active');
-    // });
+    $('.burger-menu-wrapp').click(function() {
+        $('.burger-menu-wrapp').toggleClass('active');
+        if ($('.burger-menu-wrapp').hasClass('active')) {
+            $('.nav-wrap').slideDown();
+            $('.nav-wrap').css('display', 'flex');
+            $('.burger-text ').text('закрыть');
+        } else {
+            $('.burger-text ').text('меню');
+            $('.nav-wrap').slideUp();
+
+
+        }
+
+    });
 });
