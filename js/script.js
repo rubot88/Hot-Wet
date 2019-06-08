@@ -3,8 +3,6 @@ $(document).ready(function() {
         fade: true,
         arrows: false,
         asNavFor: '.dots-wrap'
-
-
     });
     $('.dots-wrap').slick({
         slidesToShow: 3,
@@ -18,13 +16,19 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [{
-            breakpoint: 961,
-            settings: {
-                autoplay: true,
-                slidesToShow: 3,
-                slidesToScroll: 1
+                breakpoint: 965,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 1
+                }
+
             }
-        }]
+        ]
     });
 
     $('.moreless').click(function() {
