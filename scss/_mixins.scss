@@ -1,0 +1,53 @@
+@mixin display-inline-block ($display:inline-block, $vertical-align: top) {
+    display: $display;
+    vertical-align: $vertical-align;
+}
+
+@mixin font-size($font-size: 14px, $line-height: 18px) {
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin img-respons {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin triangle-arrow($direction, $size, $weight, $color) {
+    @if $direction==down {
+        width: $size;
+        height: $size;
+        border-right: $weight solid $color;
+        border-bottom: $weight solid $color;
+        transform: rotate(45deg);
+    }
+    @else if $direction==up {
+        width: $size;
+        height: $size;
+        border-right: $weight solid $color;
+        border-bottom: $weight solid $color;
+        transform: rotate(-135deg);
+    }
+    @else if $direction==right {
+        width: $size;
+        height: $size;
+        border-right: $weight solid $color;
+        border-bottom: $weight solid $color;
+        transform: rotate(-45deg);
+    }
+    
+    @else if $direction==left {
+        width: $size;
+        height: $size;
+        border-right: $weight solid $color;
+        border-bottom: $weight solid $color;
+        transform: rotate(135deg);
+    }
+}
